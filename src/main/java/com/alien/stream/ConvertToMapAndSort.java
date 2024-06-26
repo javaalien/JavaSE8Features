@@ -28,7 +28,6 @@ public class ConvertToMapAndSort {
 		 System.out.println("Notes : " + notesRecords);
 		
 	}
-
 }
 
 class Notes {
