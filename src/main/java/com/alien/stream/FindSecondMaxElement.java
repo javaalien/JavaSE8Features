@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+//Given a list of integers, find the second maximum value element present in it using Stream functions?
+
 public class FindSecondMaxElement {
 
 	public static void main(String[] args) {
