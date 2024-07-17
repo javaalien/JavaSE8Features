@@ -1,4 +1,4 @@
-package com.alien;
+package com.alien.employeeSalary;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,12 +9,9 @@ public class EmployeeOrganizationCount {
 
 	public static void main(String[] args) {
 
-		List<Employee> employees = Arrays.asList(
-				new Employee("Virat Gupta", "Male", "Infosys"),
-				new Employee("Priya Patil", "Female", "Infosys"), 
-				new Employee("Amit Raj", "Male", "TCS"),
-				new Employee("Deepika Sharma", "Female", "TCS"), 
-				new Employee("Raj Kumar", "Male", "Infosys"));
+		List<Employee> employees = Arrays.asList(new Employee("Virat Gupta", "Male", "Infosys"),
+				new Employee("Priya Patil", "Female", "Infosys"), new Employee("Amit Raj", "Male", "TCS"),
+				new Employee("Deepika Sharma", "Female", "TCS"), new Employee("Raj Kumar", "Male", "Infosys"));
 
 		long malesInInfosys = employees.stream()
 				.filter(e -> "Male".equals(e.getGender()) && "Infosys".equals(e.getOrganization())).count();
@@ -30,26 +27,5 @@ public class EmployeeOrganizationCount {
 		System.out.println("Male employees in TCS: " + malesInTCS);
 		System.out.println("Female employees in TCS: " + femalesInTCS);
 
-	}
-
-}
-
-class Employee {
-	private String name;
-	private String gender;
-	private String organization;
-
-	Employee(String name, String gender, String organization) {
-		this.name = name;
-		this.gender = gender;
-		this.organization = organization;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public String getOrganization() {
-		return organization;
 	}
 }

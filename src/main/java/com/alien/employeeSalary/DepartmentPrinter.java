@@ -1,31 +1,12 @@
-package com.alien;
+package com.alien.employeeSalary;
 
 import java.util.Arrays;
 import java.util.List;
 
 // Java Program to Print the Name of All Departments in the Organization
 
+
 public class DepartmentPrinter {
-
-	static class Employee {
-		String name;
-		int age;
-		String gender;
-		String department;
-		String organization;
-
-		Employee(String name, int age, String gender, String department, String organization) {
-			this.name = name;
-			this.age = age;
-			this.gender = gender;
-			this.department = department;
-			this.organization = organization;
-		}
-
-		public String getDepartment() {
-			return department;
-		}
-	}
 
 	public static void main(String[] args) {
 
@@ -38,7 +19,7 @@ public class DepartmentPrinter {
 				new Employee("Gita Saxena", 31, "Female", "Marketing", "Infosys"));
 
 		employees.stream()
-				.map(Employee::getDepartment)
+				.map(Employee::getDeptName)
 				.distinct()
 				.forEach(System.out::println);
 
