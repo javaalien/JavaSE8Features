@@ -14,5 +14,4 @@ public class StreamCountExample {
 		System.out.println("Number of names starting with 'A': " + count);
 
 	}
-
 }
