@@ -2,6 +2,7 @@ package com.alien.stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 class Product1 {
@@ -31,6 +32,18 @@ public class CollectorsExample {
 		List<Float> productPriceList = productsList.stream().map(x -> x.price).collect(Collectors.toList());
 
 		System.out.println(productPriceList);
+
+		Set<Float> productPriceSet = productsList.stream().map(x -> x.price).collect(Collectors.toSet());
+
+		System.out.println(productPriceSet);
+
+		Double average = productsList.stream().collect(Collectors.averagingDouble(p -> p.price));
+
+		System.out.println("Average price is: " + average);
+
+		Long noOfElements = productsList.stream().collect(Collectors.counting());
+
+		System.out.println("Total elements : " + noOfElements);
 
 	}
 }
